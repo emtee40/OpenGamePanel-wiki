@@ -1,11 +1,22 @@
 # Open Game Panel (OGP) Wiki
 
+***
+
 ## About
 
 The Open Game Panel (OGP) consists of two software packages.  The agent manages, controls, and in some cases configures and installs game servers on the actual host server itself.  The web portion of OGP is powered by PHP and serves as a secure interface between one or many OGP agents.  The OGP web software is a centralized location for server admins, users, and sub-users to stop, start, manage, and edit their game servers across multiple host servers.
 
 ***
 
+## Quick Navigation:
+
+[OGP Agent Guide](#agent-installation)
+
+[OGP Panel Web Guide](#web-installation)
+
+[Help](#help)
+
+***
 
 ## Agent Installation
 
