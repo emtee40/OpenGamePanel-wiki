@@ -78,7 +78,7 @@ It is recommended that the OGP agent run under its own sudo user account.  To cr
 
 ```
 sudo adduser ogpbot
-usermod -a -G sudo ogpbot
+sudo usermod -a -G sudo ogpbot
 ```
 
 Extract the agent files to any directory.  Then run install.sh with sudo:
