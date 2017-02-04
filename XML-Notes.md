@@ -5,7 +5,7 @@ _The order of each XML element matters, and this guide presents them in their or
 ___
 ###Windows:
 ####Pre-Start Commands:
-Comes after the <server_params> element.  There can only be one <pre_start> element.  It can run multiple lines of script that will be executed by the cmd batch environment.
+Comes after the `<server_params>` element.  There can only be one `<pre_start>` element.  It can run multiple lines of script that will be executed by the cmd batch environment.
 
 This can be filled with lines of script that will be run in a batch script just before the game server is started.  The script will always change directory into the home directory before your commands will run, so you can reference things locally.
 ```
@@ -13,7 +13,7 @@ This can be filled with lines of script that will be run in a batch script just 
 ```
 
 ####Environment Variables:
-Comes after <pre_start> element.  There can only be one <environment_variables> element.  It can contain multiple entries one per line.
+Comes after `<pre_start>` element.  There can only be one `<environment_variables>` element.  It can contain multiple entries one per line.
 
 ```
 <environment_variables>
@@ -25,7 +25,7 @@ ___
 ###Linux:
 
 ####Pre-Start Commands:
-Comes after the <server_params> element.  There can only be one <pre_start> element.  It can run multiple lines of script that will be executed by the bash shell.
+Comes after the `<server_params>` element.  There can only be one `<pre_start>` element.  It can run multiple lines of script that will be executed by the bash shell.
 
 This can be filled with lines of script that will be run in a bash script just before the game server is started. You do NOT need to provide the shebang "#!/bin/bash" in your commands.  The script will always change directory into the home directory before your commands will run, so you can reference things locally.
 ```
@@ -41,7 +41,7 @@ Example (writes hiya to a file named testingPreStart in the home directory of th
 ```
 
 ####Environment Variables:
-Comes after <pre_start> element.  There can only be one <environment_variables> element.  It can contain multiple entries one per line.
+Comes after `<pre_start>` element.  There can only be one `<environment_variables>` element.  It can contain multiple entries one per line.
 
 ```
 <environment_variables>
