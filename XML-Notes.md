@@ -22,6 +22,7 @@ Comes after `<pre_start>` element.  There can only be one `<environment_variable
 Used for setting environment variables which may be needed by some servers.  This is run in the batch environment, so please make sure you're using Windows commands for your environment SETS.
 
 Special entries:
+
 `{OGP_HOME_DIR}` will be replaced by the home directory for the game server.
 ___
 ###Linux:
@@ -60,4 +61,5 @@ export LD_LIBRARY_PATH="{OGP_HOME_DIR}/RustDedicated_Data/Plugins/x86_64"
 ```
 
 Special entries:
+
 `{OGP_HOME_DIR}` will be replaced by the home directory for the game server.
