@@ -63,3 +63,25 @@ export LD_LIBRARY_PATH="{OGP_HOME_DIR}/RustDedicated_Data/Plugins/x86_64"
 Special entries:
 
 `{OGP_HOME_DIR}` will be replaced by the home directory for the game server.
+
+####Locking / Protecting Additional Files:
+Comes after `<environment_variables>` element.  There can only be one `<lock_files>` element.  It can contain multiple entries one per line.
+
+```
+<lock_files>
+</lock_files>
+```
+Used for protecting additional game server files using chattr.  This is a Linux only element.   You can use relative (paths are relative to the home directory for the game server) or absolute paths.
+
+Example:
+
+```
+<lock_files>
+bin/AvorionServer
+</lock_files>
+```
+The above example adds chattr +i to the bin/AvorionServer executable.  This prevents the user from changing it.  When SteamCMD or Rsync is run to update the files, everything is unlocked, but the files specified here will be locked post update / install.  These files are also locked again (just to make sure) before the server is restarted and started.  Entries here will not BREAK or AFFECT the steamcmd or Rsync update process.
+
+Special entries:
+
+`{OGP_HOME_DIR}` will be replaced by the home directory for the game server.  However, if you're using this variable, you should just use a local path.
