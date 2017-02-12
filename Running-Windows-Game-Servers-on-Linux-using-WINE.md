@@ -20,9 +20,11 @@ Run the below commands based on your operating system to obtain everything you n
 ### Set VNC Password and Configure Fluxbox
 
 After installing the needed packages, it is recommended that you set a password for your VNC server. To set a VNC password for the OGP agent user, first login as the OGP user.  Adjust the below code as necessary using the correct ogp user.
+
 `sudo su - ogp_agent`
 
 Set a VNC password now by running this command:
+
 `vncpasswd`
 
 Configure VNC to use Fluxbox:
@@ -33,17 +35,21 @@ vncserver -kill :1
 ```
 
 Configure your VNC server to interface with the fluxbox desktop environment.
+
 `nano ~/.vnc/xstartup`
 
 Add the line below to the end of the file.
+
 `fluxbox &`
 
 Save the file (CTRL + O) and exit nano (CTRL + X).
 
 Switch back to the root account.
+
 `exit`
 
 ### Create a Startup Script for the VNC Server
+
 `sudo nano /etc/init.d/ogp_vnc
 
 Copy and paste the following lines into the file:
@@ -155,18 +161,23 @@ exit $RETVAL
 Make sure to adjust the "agent_user=" line with your agent's username.
 
 Save and exit.  Make the script executable by running the below command:
+
 `sudo chmod +x /etc/init.d/ogp_vnc`
 
 ### Run the VNC Script when the System Boots
 
 #### Ubuntu / Debian:
+
 `sudo update-rc.d ogp_vnc defaults`
 
 #### Fedora / CentOS/ Red-Hat:
+
 `sudo chkconfig ogp_vnc on`
 
 ### Start the Service
+
 `sudo service ogp_vnc start`
 
 ### Connecting via VNC:
+
 Connect to your server by using your server's IP address and port 1 using any VNC client.  
