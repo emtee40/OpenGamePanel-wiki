@@ -50,7 +50,7 @@ Switch back to the root account.
 
 ### Create a Startup Script for the VNC Server
 
-`sudo nano /etc/init.d/ogp_vnc
+`sudo nano /etc/init.d/ogp_vnc`
 
 Copy and paste the following lines into the file:
 
