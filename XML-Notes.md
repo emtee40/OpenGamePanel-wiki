@@ -4,7 +4,7 @@
 _The order of each XML element matters, and this guide presents them in their order of appearance!_
 ___
 ###Linux and Windows:
-####Replacing Key Value Pairs in Configuration Files as Text
+####Replace Texts
 `<replace_texts>` Comes after `<mods>`.
 
 Contains multiple `<text>` entries like so:
