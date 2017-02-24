@@ -26,7 +26,7 @@ Contains multiple `<text>` entries like so:
   </replace_texts>
 ```
 
-`<default>` within `<text>` is what the line starts with.
+`<default>` within `<text>` is what the line to replace starts with.
 
 `<var>` within `<text>` is the key for what should be kept when the line is replaced with the value entered by the user when replacing text occurs.
 
