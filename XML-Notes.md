@@ -4,8 +4,54 @@
 _The order of each XML element matters, and this guide presents them in their order of appearance!_
 ___
 ###Linux and Windows:
+####Replacing Key Value Pairs in Configuration Files as Text
+`<replace_texts>` Comes after `<mods>`.
+
+Contains multiple `<text>` entries like so:
+
+```
+  <replace_texts>
+	  <text key="control_password">
+		<default>ServerAdminPassword=.*</default>
+		<var>ServerAdminPassword=</var>
+		<filepath>ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini</filepath>
+		<options>sq</options>
+	  </text>
+	  <text key="home_name">
+		<default>SessionName=.*</default>
+		<var>SessionName=</var>
+		<filepath>ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini</filepath>
+		<options>sq</options>
+	  </text>
+  </replace_texts>
+```
+
+`<default>` within `<text>` is what the line starts with.
+`<var>` within `<text>` is the key for what should be kept when the line is replaced with the value entered by the user when replacing text occurs.
+`<filepath>` within `<text>` specifies the text file to make the replacement in.
+`<options>` within `<text>` specifies how to enter the user's value after the `<var>` key.  Possible options are:
+
+```
+        nothing / no value = placed as is
+        s = space / separated
+        q = quoted
+        sq = space and quotes
+        sc = space and ends with a comma
+        sqc = space, quoted, and ends with a comma
+```
+
+For example, `%SP%` in `<cli_template>` will be replaced with `?ServerPassword=` and the value entered by the user.  The value entered can be modified to fit your needs by using the `<option>` element within the `<param>` element.
+
+Valid options are for the `<option>` element within the `<param>` element within the `<server_params>` element are:
+```
+ns = no space between key and value
+q = quotes wrapped around value after key (no space added)
+s = space added after key before value (no quotes added)
+anything else = space after key and quotes around the value 
+```
+
 ####Server Params:
-Comes after `<replace_texts>`.
+`<server_params>` Comes after `<replace_texts>`.
 
 Contains multiple `<param>` entries like so:
 
