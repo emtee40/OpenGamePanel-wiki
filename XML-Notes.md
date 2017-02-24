@@ -3,6 +3,49 @@
 
 _The order of each XML element matters, and this guide presents them in their order of appearance!_
 ___
+###Linux and Windows:
+####Server Params:
+Comes after `<replace_texts>`.
+
+Contains multiple `<param>` entries like so:
+
+```
+  <server_params>
+	<param id="RCONP" key="?RCONPort=" type="text">
+      <option>ns</option>
+      <caption>Standard Rcon Port is 32330</caption>
+      <desc>Change this Port, if you have more then 1 server.</desc>
+    </param>
+  	<param id="QPORT2" key="-port=" type="text">
+      <option>ns</option>
+      <caption>7777 Port</caption>
+      <desc>Change this Port, if you have more then 1 server.</desc>
+    </param>
+	<param id="DO" key="?DifficultyOffset=" type="text">
+      <option>ns</option>
+      <caption>Difficulty Offset</caption>
+      <desc>Changes the difficulty on the server, choose 0 or 1</desc>
+    </param>
+	<param id="SP" key="?ServerPassword=" type="text">
+      <option>ns</option>
+      <caption>Server Password</caption>
+      <desc>Players must know this password to connect.</desc>
+    </param>
+  </server_params>
+```
+
+id attribute on the `<param>` specifies which variable to replace in the `<cli_template>`
+
+For example, `%SP%` in `<cli_template>` will be replaced with `?ServerPassword=` and the value entered by the user.  The value entered can be modified to fit your needs by using the `<option>` element within the `<param>` element.
+
+Valid options are:
+```
+ns = no space between key and value
+q = quotes wrapped around value after key (no space added)
+s = space added after key before value (no quotes added)
+anything else = space after key and quotes around the value 
+```
+___
 ###Windows:
 ####Pre-Start Commands:
 Comes after the `<server_params>` element.  There can only be one `<pre_start>` element.  It can run multiple lines of script that will be executed by the cmd batch environment.
