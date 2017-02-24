@@ -38,7 +38,7 @@ id attribute on the `<param>` specifies which variable to replace in the `<cli_t
 
 For example, `%SP%` in `<cli_template>` will be replaced with `?ServerPassword=` and the value entered by the user.  The value entered can be modified to fit your needs by using the `<option>` element within the `<param>` element.
 
-Valid options are:
+Valid options are for the `<option>` element within the `<param>` element within the `<server_params>` element are:
 ```
 ns = no space between key and value
 q = quotes wrapped around value after key (no space added)
