@@ -27,8 +27,11 @@ Contains multiple `<text>` entries like so:
 ```
 
 `<default>` within `<text>` is what the line starts with.
+
 `<var>` within `<text>` is the key for what should be kept when the line is replaced with the value entered by the user when replacing text occurs.
+
 `<filepath>` within `<text>` specifies the text file to make the replacement in.
+
 `<options>` within `<text>` specifies how to enter the user's value after the `<var>` key.  Possible options are:
 
 ```
@@ -38,16 +41,6 @@ Contains multiple `<text>` entries like so:
         sq = space and quotes
         sc = space and ends with a comma
         sqc = space, quoted, and ends with a comma
-```
-
-For example, `%SP%` in `<cli_template>` will be replaced with `?ServerPassword=` and the value entered by the user.  The value entered can be modified to fit your needs by using the `<option>` element within the `<param>` element.
-
-Valid options are for the `<option>` element within the `<param>` element within the `<server_params>` element are:
-```
-ns = no space between key and value
-q = quotes wrapped around value after key (no space added)
-s = space added after key before value (no quotes added)
-anything else = space after key and quotes around the value 
 ```
 
 ####Server Params:
@@ -86,10 +79,10 @@ For example, `%SP%` in `<cli_template>` will be replaced with `?ServerPassword=`
 
 Valid options are for the `<option>` element within the `<param>` element within the `<server_params>` element are:
 ```
-ns = no space between key and value
-q = quotes wrapped around value after key (no space added)
-s = space added after key before value (no quotes added)
-anything else = space after key and quotes around the value 
+        ns = no space between key and value
+        q = quotes wrapped around value after key (no space added)
+        s = space added after key before value (no quotes added)
+        anything else = space after key and quotes around the value 
 ```
 ___
 ###Windows:
