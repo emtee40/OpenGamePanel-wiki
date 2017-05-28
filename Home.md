@@ -46,7 +46,7 @@ sudo apt-get install libhttp-daemon-perl
 ```
 sudo yum -y update
 sudo yum -y install epel-release wget subversion git
-sudo yum install -y perl-libwww-perl proftpd proftpd-utils perl-ExtUtils-MakeMaker glibc.i686 glibc libgcc_s.so.1 perl-IO-Compress-Bzip2
+sudo yum install -y perl-libwww-perl proftpd proftpd-utils perl-ExtUtils-MakeMaker glibc.i686 glibc libgcc_s.so.1 perl-IO-Compress-Bzip2 perl-Archive-Extract perl-Archive-Zip perl-Archive-Tar perl-Path-Class
 ```
 
 After installation has been completed, you'll need to run the following to get proftpd to work properly:
@@ -61,7 +61,7 @@ sudo service proftpd restart
 ```
 sudo yum -y update
 sudo yum -y install epel-release wget subversion git
-sudo yum install -y perl-HTTP-Daemon perl-LWP-Protocol-http10 proftpd proftpd-utils perl-ExtUtils-MakeMaker glibc.i686 glibc libgcc_s.so.1 perl-IO-Compress-Bzip2
+sudo yum install -y perl-HTTP-Daemon perl-LWP-Protocol-http10 proftpd proftpd-utils perl-ExtUtils-MakeMaker glibc.i686 glibc libgcc_s.so.1 perl-IO-Compress-Bzip2 perl-Archive-Extract perl-Archive-Zip perl-Archive-Tar perl-Path-Class
 ```
 
 **Other OS:**
