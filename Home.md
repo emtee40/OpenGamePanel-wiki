@@ -143,7 +143,7 @@ sudo apt-get install apache2 curl subversion php7.0 php7.0-gd php7.0-zip libapac
 sudo apt-get install apache2 curl subversion php5 php5-gd php5-xmlrpc php5-curl php5-mysql php-pear phpmyadmin mysql-server libapache2-mod-php5 git
 ```
 
-**Debian 7 Change Default Apache Root Directory**
+**Debian 7 Change Default Apache Root Directory:**
 
 If you're running Debian 7, it is recommended you change your DocumentRoot to /var/www/html by running these commands (OPTIONAL **do NOT do this if you host other websites or have pre-configured your webserver for a custom setup**):
 
