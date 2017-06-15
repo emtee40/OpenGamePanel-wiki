@@ -27,7 +27,7 @@ The OGP agent is written in PERL and depends on several software packages.  The 
 **All Versions of Ubuntu:**
 
 ```
-sudo apt-get install libxml-parser-perl libpath-class-perl perl-modules screen rsync sudo e2fsprogs unzip subversion libarchive-extract-perl pure-ftpd libarchive-zip-perl libc6 libgcc1 git
+sudo apt-get install libxml-parser-perl libpath-class-perl perl-modules screen rsync sudo e2fsprogs unzip subversion libarchive-extract-perl pure-ftpd libarchive-zip-perl libc6 libgcc1 git curl
 sudo apt-get install libc6-i386 libgcc1:i386
 sudo apt-get install lib32gcc1
 sudo apt-get install libhttp-daemon-perl
@@ -36,7 +36,7 @@ sudo apt-get install libhttp-daemon-perl
 **All Versions of Debian:**
 
 ```
-sudo apt-get install libxml-parser-perl libpath-class-perl perl-modules screen rsync sudo e2fsprogs unzip subversion pure-ftpd libarchive-zip-perl libc6 libgcc1 git
+sudo apt-get install libxml-parser-perl libpath-class-perl perl-modules screen rsync sudo e2fsprogs unzip subversion pure-ftpd libarchive-zip-perl libc6 libgcc1 git curl
 sudo apt-get install libc6-i386 lib32gcc1
 sudo apt-get install libhttp-daemon-perl
 ```
