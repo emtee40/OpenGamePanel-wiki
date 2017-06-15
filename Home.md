@@ -35,6 +35,20 @@ sudo apt-get install libhttp-daemon-perl
 
 **All Versions of Debian:**
 
+If sudo is not installed automatically on your installation of Debian, switch to the root user using the below command:
+
+```
+su root
+```
+Install sudo now before proceeding:
+```
+apt-get install sudo
+```
+Exit the terminal:
+```
+exit
+```
+
 ```
 sudo apt-get install libxml-parser-perl libpath-class-perl perl-modules screen rsync sudo e2fsprogs unzip subversion pure-ftpd libarchive-zip-perl libc6 libgcc1 git curl
 sudo apt-get install libc6-i386 lib32gcc1
