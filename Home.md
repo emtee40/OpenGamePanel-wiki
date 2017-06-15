@@ -49,6 +49,8 @@ Exit the terminal:
 exit
 ```
 
+Now install the prerequisites:
+
 ```
 sudo apt-get install libxml-parser-perl libpath-class-perl perl-modules screen rsync sudo e2fsprogs unzip subversion pure-ftpd libarchive-zip-perl libc6 libgcc1 git curl
 sudo apt-get install libc6-i386 lib32gcc1
