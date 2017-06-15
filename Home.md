@@ -44,6 +44,10 @@ Install sudo now before proceeding:
 ```
 apt-get install sudo
 ```
+Add your user to the sudo group if you're not a member of it already:
+```
+usermod -aG sudo "{REPLACE_WITH_YOUR_LINUX_USERNAME}"
+```
 Exit the terminal:
 ```
 exit
