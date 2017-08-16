@@ -44,9 +44,10 @@ Install sudo now before proceeding:
 ```
 apt-get install sudo
 ```
-Add your user to the sudo group if you're not a member of it already:
+Add your user to the sudo group if you're not a member of it already (first line for Ubuntu, second line for CentOS / Fedora):
 ```
 usermod -aG sudo "{REPLACE_WITH_YOUR_LINUX_USERNAME}"
+usermod -aG wheel "{REPLACE_WITH_YOUR_LINUX_USERNAME}"
 ```
 Restart the machine to apply the sudo group change:
 ```
