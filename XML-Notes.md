@@ -46,7 +46,7 @@ ___
         sqc = space, quoted, and ends with a comma
 ```
 
-####Server Params:
+#### Server Params:
 `<server_params>` Comes after `<replace_texts>`.
 
 Contains multiple `<param>` entries like so:
@@ -88,8 +88,8 @@ Valid options are for the `<option>` element within the `<param>` element within
         anything else = space after key and quotes around the value 
 ```
 ___
-###Windows:
-####Pre-Start Commands:
+### Windows:
+#### Pre-Start Commands:
 Comes after the `<server_params>` element.  There can only be one `<pre_start>` element.  It can run multiple lines of script that will be executed by the cmd batch environment.
 
 This can be filled with lines of script that will be run in a batch script just before the game server is started.  The script will always change directory into the home directory before your commands will run, so you can reference things locally.
@@ -97,7 +97,7 @@ This can be filled with lines of script that will be run in a batch script just 
 <pre_start></pre_start>
 ```
 
-####Environment Variables:
+#### Environment Variables:
 Comes after `<pre_start>` element.  There can only be one `<environment_variables>` element.  It can contain multiple entries one per line.
 
 ```
@@ -110,9 +110,9 @@ Special entries:
 
 `{OGP_HOME_DIR}` will be replaced by the home directory for the game server.
 ___
-###Linux:
+### Linux:
 
-####Pre-Start Commands:
+#### Pre-Start Commands:
 Comes after the `<server_params>` element.  There can only be one `<pre_start>` element.  It can run multiple lines of script that will be executed by the bash shell.
 
 This can be filled with lines of script that will be run in a bash script just before the game server is started. You do NOT need to provide the shebang "#!/bin/bash" in your commands.  The script will always change directory into the home directory before your commands will run, so you can reference things locally.
@@ -128,7 +128,7 @@ Example (writes hiya to a file named testingPreStart in the home directory of th
 </pre_start>
 ```
 
-####Environment Variables:
+#### Environment Variables:
 Comes after `<pre_start>` element.  There can only be one `<environment_variables>` element.  It can contain multiple entries one per line.
 
 ```
@@ -149,7 +149,7 @@ Special entries:
 
 `{OGP_HOME_DIR}` will be replaced by the home directory for the game server.
 
-####Locking / Protecting Additional Files:
+#### Locking / Protecting Additional Files:
 Comes after `<environment_variables>` element.  There can only be one `<lock_files>` element.  It can contain multiple entries one per line.
 
 ```
