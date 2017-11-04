@@ -115,7 +115,7 @@ ___
 #### Pre-Start Commands:
 Comes after the `<server_params>` element.  There can only be one `<pre_start>` element.  It can run multiple lines of script that will be executed by the bash shell.
 
-This can be filled with lines of script that will be run in a bash script just before the game server is started. You do NOT need to provide the shebang "#!/bin/bash" in your commands.  The script will always change directory into the home directory before your commands will run, so you can reference things locally.
+This can be filled with lines of script that will be run in a bash script just before the game server is started. You **do NOT need** to provide the shebang `#!/bin/bash` in your commands.  The script will always change directory into the home directory before your commands will run, so you can reference things locally.
 ```
 <pre_start></pre_start>
 ```
