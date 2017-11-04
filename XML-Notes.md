@@ -4,9 +4,9 @@
 _The order of each XML element matters, and this guide presents them in their order of appearance!_
 ___
 
-###Linux and Windows:
+### Linux and Windows:
 
-####Replace Texts
+#### Replace Texts
 
 `<replace_texts>` Comes after `<mods>`.
 
