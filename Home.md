@@ -194,6 +194,10 @@ Once the installation is completed, under the "Administration" tab, click on "Se
 
 ***
 
+## Additional Documentation and Info
+
+Please read the posts in [the OGP Important Information forum](https://opengamepanel.org/forum/viewforum.php?forum_id=18) for other tidbits of information, guides, and documentation.
+
 ## Help
 
 For help installing OGP, please visit and post in our [forums](http://faq.opengamepanel.org/forum/index.php).
