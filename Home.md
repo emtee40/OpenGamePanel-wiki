@@ -11,9 +11,9 @@ The Open Game Panel (OGP) consists of two software packages.  The agent manages,
 ## Quick Navigation:
 [OGP Easy Installers - Windows and Linux](#easy-installation)
 
-[OGP Agent Linux Manual Installation Guide](#agent-installation)
+[OGP Agent Linux Manual Installation Guide](#manual-agent-linux-installation)
 
-[OGP Panel Linux Manual Web Installation Guide](#web-installation)
+[OGP Panel Linux Manual Web Installation Guide](#manual-web-linux-installation)
 
 [Help](#help)
 
@@ -23,7 +23,7 @@ The Open Game Panel (OGP) consists of two software packages.  The agent manages,
 
 The Open Game Panel agent and web packages can be easily installed on Ubuntu 14.04 and up, Debian, CentOS 6 & 7, and Windows 7 through Windows 10 (including Windows Server versions) using our pre-built easy install packages.  You can download and install the easy installers from the [OGP Downloads page](https://opengamepanel.org/infusions/pro_download_panel/download.php?catid=9).  There will also be specific instructions on the download page you must follow to use the easy installers.  This is the quickest way to install and use OGP.
 
-The easy installers are the **ONLY installation methods recommended for Windows**.  If you do NOT use the easy installers for Windows, good luck.
+If you want to install OGP on Windows, you MUST USE the Windows easy installers (which are pre-configured cygwin packages).  If you do NOT use the easy installers for Windows, good luck.
 
 ## Manual Agent Linux Installation
 
@@ -124,7 +124,7 @@ Follow the installation prompts, and you're done.  The installer should add the 
 
 ***
 
-## Web Installation
+## Manual Web Linux Installation
 
 ### Web Server Required
 
