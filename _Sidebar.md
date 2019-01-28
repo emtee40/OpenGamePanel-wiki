@@ -1,3 +1,12 @@
+### [Home](https://github.com/OpenGamePanel/OGP-Website/wiki)
+* [Easy Installation (recommended)](https://github.com/OpenGamePanel/OGP-Website/wiki#easy-installation)
+* [Manual Agent Linux Installation](https://github.com/OpenGamePanel/OGP-Website/wiki#manual-agent-linux-installation)
+* [Manual Web Linux Installation](https://github.com/OpenGamePanel/OGP-Website/wiki#manual-web-linux-installation)
+
+### [Running Windows Game Servers on Linux using WINE](https://github.com/OpenGamePanel/OGP-Website/wiki/Running-Windows-Game-Servers-on-Linux-using-WINE)
+
+### [XML Notes](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes)
+
 * [Game Config](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#game-config)
 * [Game Key](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#game-key)
 * [Query Protocol](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#query-protocol)
