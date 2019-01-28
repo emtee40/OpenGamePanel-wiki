@@ -1,3 +1,5 @@
+# Navigation
+
 ### [Home](https://github.com/OpenGamePanel/OGP-Website/wiki)
 * [Easy Installation (recommended)](https://github.com/OpenGamePanel/OGP-Website/wiki#easy-installation)
 * [Manual Agent Linux Installation](https://github.com/OpenGamePanel/OGP-Website/wiki#manual-agent-linux-installation)
@@ -14,7 +16,7 @@
 * [GameQ Query Name](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#gameq-query-name)
 * [Installer](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#installer)
 * [Game Name](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#game-name)
-* [Server Executable-name](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#server-executable-name)
+* [Server Executable Name](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#server-executable-name)
 * [Query Port](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#query-port)
 * [CLI Template](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#cli-template)
 * [CLI Parameters](https://github.com/OpenGamePanel/OGP-Website/wiki/XML-Notes#cli-parameters)
