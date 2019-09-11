@@ -25,11 +25,17 @@ The Open Game Panel agent and web packages can be easily installed on Ubuntu 14.
 
 If you want to install OGP on Windows, you MUST USE the Windows easy installers (which are pre-configured cygwin packages).  If you do NOT use the easy installers for Windows, good luck.
 
+***
+
 ## Manual Agent Linux Installation
 
 ### Prerequisites / Installing Dependent Software Packages
 
 The OGP agent is written in PERL and depends on several software packages.  The below guide provides code to install the prerequisites.  If any of these software packages are missing, the agent will not work correctly.
+
+***
+
+### Ubuntu
 
 **All Versions of Ubuntu:**
 
@@ -41,7 +47,9 @@ sudo apt-get install lib32gcc1
 sudo apt-get install libhttp-daemon-perl
 ```
 
-**All Versions of Debian:**
+***
+
+### Debian
 
 If sudo is not installed automatically on your installation of Debian, switch to the root user using the below command:
 
@@ -75,6 +83,11 @@ sudo apt-get install libhttp-daemon-perl
 sudo apt-get install libarchive-extract-perl
 ```
 
+***
+
+### CentOS
+
+
 **CentOS 6:**
 
 ```
@@ -98,11 +111,15 @@ sudo yum -y install epel-release wget subversion git
 sudo yum install -y perl-HTTP-Daemon perl-LWP-Protocol-http10 proftpd proftpd-utils perl-ExtUtils-MakeMaker glibc.i686 glibc libgcc_s.so.1 perl-IO-Compress-Bzip2 perl-Archive-Extract perl-Archive-Zip perl-Archive-Tar perl-Path-Class
 ```
 
-**Other OS:**
+***
+
+### Other
 
 The OGP agent will work with the proper PERL prerequisites on any Linux operating system. This guide only contains instructions for the most post popular Linux flavors.  If you manage to setup OGP on a different operating system, please let us know so we can include it in this guide.
 
 There are **OLD** instructions [here](https://sourceforge.net/p/hldstart/wiki/Installation%20Notes/) for other operating systems including Gentoo and OpenSUSE.
+
+***
 
 ### Obtaining Latest Version and Running Installer
 
@@ -139,7 +156,7 @@ _Note: MySQL can and should be replaced with MariaDB (the package name is usuall
 
 ***
 
-# Ubuntu
+### Ubuntu
 
 **For Ubuntu 14.04 or Lower:**
 ```
@@ -158,7 +175,7 @@ sudo apt-get install apache2 curl subversion php7.2 php7.2-gd php7.2-zip libapac
 
 ***
 
-# Debian
+### Debian
 
 If you are running Debian 10 or lower, first make sure you have sudo installed and your user has sudo access.  
 
@@ -223,7 +240,7 @@ This would mean you should place the OGP files in this directory or in a subdire
 
 ***
 
-# CentOS
+### CentOS
 
 **CentOS 6:**
 ```
@@ -245,6 +262,8 @@ sudo yum -y install httpd php php-xmlrpc php-xml php-mysql php-gd php-pear php-m
 ```
 
 For other operating systems, please check the **OLD** instructions [here](https://sourceforge.net/p/hldstart/wiki/Installation%20Notes/#prerequisites-for-webui).
+
+***
 
 ### Installing OGP Web Software
 The latest OGP web files can be downloaded [here](https://github.com/OpenGamePanel/OGP-Website/archive/master.zip).
