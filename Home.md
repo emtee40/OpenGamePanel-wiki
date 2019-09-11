@@ -144,7 +144,54 @@ sudo apt-get install apache2 curl subversion php5 php5-gd php5-xmlrpc php5-curl 
 
 **For Ubuntu 16.04 or Higher:**
 ```
-sudo apt-get install apache2 curl subversion php7.0 php7.0-gd php7.0-zip libapache2-mod-php7.0 php7.0-curl php7.0-mysql php7.0-xmlrpc php-pear phpmyadmin mysql-server php7.0-mbstring php-gettext git
+sudo apt-get install apache2 curl subversion php7.0 php7.0-gd php7.0-zip libapache2-mod-php7.0 php7.0-curl php7.0-mysql php7.0-xmlrpc php-pear phpmyadmin mysql-server php7.0-mbstring php-gettext git php-bcmath
+```
+
+**For Ubuntu 18.04 or Higher:**
+```
+sudo apt-get install apache2 curl subversion php7.2 php7.2-gd php7.2-zip libapache2-mod-php7.2 php7.2-curl php7.2-mysql php7.2-xmlrpc php-pear phpmyadmin mysql-server php7.2-mbstring php-gettext git php-bcmath
+```
+
+**For Debian 10 or Lower:**
+
+If you are running Debian 10 or lower, first make sure you have sudo installed and your user has sudo access.  
+
+You can install and configure sudo by switching to the root user account using the command below:
+
+```
+su -
+````
+
+Now install the sudo package:
+
+```
+apt-get install sudo
+```
+
+Add your user to the sudo group if you're not a member of it already:
+
+```
+usermod -aG sudo "{REPLACE_WITH_YOUR_LINUX_USERNAME}"
+```
+
+Restart the machine to apply the sudo group change:
+
+```
+shutdown -r now
+```
+
+Then, run the following commands in a terminal:
+
+**For Debian 10 Only:**
+
+```
+sudo apt-get install apache2 curl subversion php7.3 php7.3-gd php7.3-zip libapache2-mod-php7.3 php7.3-curl php7.3-mysql php7.3-xmlrpc php-pear mariadb-server php7.3-mbstring php-gettext git php-bcmath phpmyadmin
+```
+
+**For Debian 9 Only:**
+
+```
+sudo apt-get install apache2 curl subversion php7.0 php7.0-gd php7.0-zip libapache2-mod-php7.0 php7.0-curl php7.0-mysql php7.0-xmlrpc php-pear phpmyadmin mysql-server php7.0-mbstring php-gettext git php-bcmath
 ```
 
 **For Debian 8 or Lower:**
