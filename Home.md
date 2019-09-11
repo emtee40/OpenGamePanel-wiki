@@ -35,7 +35,8 @@ The OGP agent is written in PERL and depends on several software packages.  The 
 
 ```
 sudo apt-get install libxml-parser-perl libpath-class-perl perl-modules screen rsync sudo e2fsprogs unzip subversion libarchive-extract-perl pure-ftpd libarchive-zip-perl libc6 libgcc1 git curl
-sudo apt-get install libc6-i386 libgcc1:i386
+sudo apt-get install libc6-i386 
+sudo apt-get install libgcc1:i386
 sudo apt-get install lib32gcc1
 sudo apt-get install libhttp-daemon-perl
 ```
@@ -45,7 +46,7 @@ sudo apt-get install libhttp-daemon-perl
 If sudo is not installed automatically on your installation of Debian, switch to the root user using the below command:
 
 ```
-su root
+su -
 ```
 Install sudo now before proceeding:
 ```
@@ -69,7 +70,7 @@ sudo apt-get install libc6-i386 lib32gcc1
 sudo apt-get install libhttp-daemon-perl
 ```
 
-**Debian 8 Extra Packages:**
+**Debian 8, 9, and 10 Extra Packages:**
 ```
 sudo apt-get install libarchive-extract-perl
 ```
