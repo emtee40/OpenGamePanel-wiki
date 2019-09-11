@@ -137,22 +137,28 @@ The below web server packages need to be installed before you can run the OGP we
 
 _Note: MySQL can and should be replaced with MariaDB (the package name is usually mariadb-server) if desired_
 
+***
+
+# Ubuntu
+
 **For Ubuntu 14.04 or Lower:**
 ```
 sudo apt-get install apache2 curl subversion php5 php5-gd php5-xmlrpc php5-curl php5-mysql php-pear phpmyadmin mysql-server libapache2-mod-php5 git
 ```
 
-**For Ubuntu 16.04 or Higher:**
+**For Ubuntu 16.04:**
 ```
 sudo apt-get install apache2 curl subversion php7.0 php7.0-gd php7.0-zip libapache2-mod-php7.0 php7.0-curl php7.0-mysql php7.0-xmlrpc php-pear phpmyadmin mysql-server php7.0-mbstring php-gettext git php-bcmath
 ```
 
-**For Ubuntu 18.04 or Higher:**
+**For Ubuntu 18.04:**
 ```
 sudo apt-get install apache2 curl subversion php7.2 php7.2-gd php7.2-zip libapache2-mod-php7.2 php7.2-curl php7.2-mysql php7.2-xmlrpc php-pear phpmyadmin mysql-server php7.2-mbstring php-gettext git php-bcmath
 ```
 
-**For Debian 10 or Lower:**
+***
+
+# Debian
 
 If you are running Debian 10 or lower, first make sure you have sudo installed and your user has sudo access.  
 
@@ -214,6 +220,10 @@ sudo service apache2 restart
 ```
 
 This would mean you should place the OGP files in this directory or in a subdirectory within the /var/www/html path.
+
+***
+
+# CentOS
 
 **CentOS 6:**
 ```
