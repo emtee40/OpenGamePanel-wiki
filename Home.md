@@ -208,7 +208,7 @@ Then, run the following commands in a terminal:
 **For Debian 10 Only:**
 
 ```
-sudo apt-get install apache2 curl subversion php7.3 php7.3-gd php7.3-zip libapache2-mod-php7.3 php7.3-curl php7.3-mysql php7.3-xmlrpc php-pear mariadb-server php7.3-mbstring php-gettext git php-bcmath phpmyadmin
+sudo apt-get install apache2 curl subversion php7.3 php7.3-gd php7.3-zip libapache2-mod-php7.3 php7.3-curl php7.3-mysql php7.3-xmlrpc php-pear mariadb-server php7.3-mbstring php-gettext git php-bcmath
 ```
 
 **For Debian 9 Only:**
