@@ -209,7 +209,10 @@ Then, run the following commands in a terminal:
 
 ```
 sudo apt-get install apache2 curl subversion php7.3 php7.3-gd php7.3-zip libapache2-mod-php7.3 php7.3-curl php7.3-mysql php7.3-xmlrpc php-pear mariadb-server php7.3-mbstring php-gettext git php-bcmath
+sudo apt-get install phpmyadmin
 ```
+
+The second line above used to install phpmyadmin may fail.  It's just there as a placeholder for when Debian 10 adds phpmyadmin to its repository of available software to install.  phpmyadmin isn't required to run the OGP web panel software.  phpmyadmin is just useful and easy to use software.
 
 **For Debian 9 Only:**
 
