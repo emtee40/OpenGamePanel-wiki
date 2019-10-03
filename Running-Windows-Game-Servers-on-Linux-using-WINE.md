@@ -278,7 +278,10 @@ Save and exit.  Make the script executable by running the below command:
 
 #### Ubuntu / Debian:
 
-`sudo update-rc.d ogp_vnc defaults`
+```
+sudo update-rc.d ogp_vnc defaults
+sudo systemctl enable ogp_vnc
+```
 
 #### Fedora / CentOS/ Red-Hat:
 
