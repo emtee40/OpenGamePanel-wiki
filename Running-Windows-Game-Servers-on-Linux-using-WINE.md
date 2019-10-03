@@ -55,7 +55,7 @@ Switch back to the root account.
 `exit`
 
 ### Create a Startup Script for the VNC Server
-
+***
 #### Systemd Service (Ubuntu 16.04 / CentOS 7 / Newer Operating Systems)
 
 `sudo nano /etc/systemd/system/ogp_vnc.service`
@@ -166,6 +166,10 @@ Enable the ogp_vnc agent on boot:
 
 `sudo systemctl enable ogp_vnc`
 
+Make this file executable:
+
+`sudo chmod 775 /usr/bin/ogp_vnc.sh`
+***
 #### Normal Init.d Script (Older Operating Systems - Ubuntu 14.04 & Older / CentOS 6 & Older)
 
 `sudo nano /etc/init.d/ogp_vnc`
@@ -281,6 +285,8 @@ Make sure **to adjust the "agent_user=" line** with your OGP agent username.
 Save and exit.  Make the script executable by running the below command:
 
 `sudo chmod +x /etc/init.d/ogp_vnc`
+
+***
 
 ### Run the VNC Script when the System Boots
 
