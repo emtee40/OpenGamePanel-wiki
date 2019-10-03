@@ -90,10 +90,6 @@ Create the script called by the service file:
 
 Copy and paste the following lines into the file (adjust the "agent_user=" line with your agent username):
 
-Enable the ogp_vnc agent on boot:
-
-`sudo systemctl enable ogp_vnc`
-
 ```
 #!/bin/sh
 agent_user=ogp_agent
@@ -165,6 +161,10 @@ esac
 exit $RETVAL
 ```
 Make sure **to adjust the "agent_user=" line** with your OGP agent username.
+
+Enable the ogp_vnc agent on boot:
+
+`sudo systemctl enable ogp_vnc`
 
 #### Normal Init.d Script (Older Operating Systems - Ubuntu 14.04 & Older / CentOS 6 & Older)
 
