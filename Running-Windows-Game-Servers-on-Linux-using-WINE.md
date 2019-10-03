@@ -94,20 +94,15 @@ Copy and paste the following lines into the file (adjust the "agent_user=" line 
 
 ```
 #!/bin/sh
-agent_user=ogp_agent
-service=ogp_vnc.service
+export PATH="/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin"
+agent_user=earnolmartin
+#service=ogp_vnc.service
 
 start() {
     # start daemon
     echo -n "Starting OGP Agent WINE VNC: "
-    su -c "vncserver :1 -geometry 800x600 -depth 24 >/dev/null 2>&1" $agent_user
+    su -c "vncserver :1 -geometry 800x600 -depth 24" $agent_user
     RETVAL=$?
-    if [ $RETVAL -eq 0 ]; then
-       touch /var/lock/$service
-       echo success
-    else
-       echo fail
-    fi
     return $RETVAL
 }
 
@@ -116,12 +111,6 @@ stop() {
     echo -n "Stopping OGP Agent WINE VNC: "
     su -c "vncserver -kill :1 >/dev/null 2>&1" $agent_user
     RETVAL=$?
-    if [ $RETVAL -eq 0 ]; then 
-       rm -f /var/lock/$service
-       echo success
-    else
-       echo fail
-    fi
     return $RETVAL
 }
 
@@ -141,14 +130,9 @@ case "$1" in
     RETVAL=$?
     ;;
     condrestart)
-    if [ -f /var/lock/$service ]; then
-       stop
-       RETVAL=$?
-       if [ $RETVAL -eq 0 ]; then
-          start
-          RETVAL=$?
-       fi
-    fi
+    stop
+    sleep 1
+    start
     ;;
     status)
     status $service
