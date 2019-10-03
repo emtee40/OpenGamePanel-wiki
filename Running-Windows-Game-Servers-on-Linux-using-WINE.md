@@ -55,6 +55,9 @@ Switch back to the root account.
 `exit`
 
 ### Create a Startup Script for the VNC Server
+
+Use one of the two methods below depending on your operating system.  If your operating system uses the new systemd boot process, use the first guide.  If your operating system uses the old init.d boot process, scroll down to the older init.d section.
+
 ***
 #### Systemd Service (Ubuntu 16.04+ / CentOS 7+ / Newer Operating Systems)
 
