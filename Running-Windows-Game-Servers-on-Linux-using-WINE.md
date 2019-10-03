@@ -73,8 +73,10 @@ After=network.target
 [Service]
 Type=oneshot
 
-ExecStart=/bin/sh -c "/usr/bin/ogp_vnc.sh start"
+ExecStart=/bin/nohup /bin/sh -c "/usr/bin/ogp_vnc.sh start" &>/dev/null &
 ExecStop=/bin/sh -c "/usr/bin/ogp_vnc.sh stop"
+
+RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
