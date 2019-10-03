@@ -56,9 +56,117 @@ Switch back to the root account.
 
 ### Create a Startup Script for the VNC Server
 
-`sudo nano /etc/init.d/ogp_vnc`
+#### Systemd Service (Ubuntu 16.04 / CentOS 7 / Newer Operating Systems)
+
+`sudo nano /etc/systemd/system/ogp_vnc.service`
 
 Copy and paste the following lines into the file:
+
+```
+# ogp_agent systemd Service Script
+# By Open Game Panel
+# OGP <own3mall@gmail.com>
+[Unit]
+Description=OGP VNC Daemon
+After=network.target
+
+[Service]
+Type=oneshot
+
+ExecStart=/bin/sh -c "/usr/bin/ogp_vnc.sh start"
+ExecStop=/bin/sh -c "/usr/bin/ogp_vnc.sh stop"
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Save the file.  Reload the systemd daemon:
+
+`sudo systemctl daemon-reload`
+
+Create the script called by the service file:
+
+`sudo nano /usr/bin/ogp_vnc.sh`
+
+Copy and paste the following lines into the file (adjust the "agent_user=" line with your agent username):
+
+```
+#!/bin/sh
+agent_user=ogp_agent
+service=ogp_vnc.service
+
+start() {
+    # start daemon
+    echo -n "Starting OGP Agent WINE VNC: "
+    su -c "vncserver :1 -geometry 800x600 -depth 24 >/dev/null 2>&1" $agent_user
+    RETVAL=$?
+    if [ $RETVAL -eq 0 ]; then
+       touch /var/lock/$service
+       echo success
+    else
+       echo fail
+    fi
+    return $RETVAL
+}
+
+stop() {
+    # stop daemon
+    echo -n "Stopping OGP Agent WINE VNC: "
+    su -c "vncserver -kill :1 >/dev/null 2>&1" $agent_user
+    RETVAL=$?
+    if [ $RETVAL -eq 0 ]; then 
+       rm -f /var/lock/$service
+       echo success
+    else
+       echo fail
+    fi
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+    start
+    RETVAL=$?
+    ;;
+    stop)
+    stop
+    RETVAL=$?
+    ;;
+    restart)
+    stop
+    sleep 1
+    start
+    RETVAL=$?
+    ;;
+    condrestart)
+    if [ -f /var/lock/$service ]; then
+       stop
+       RETVAL=$?
+       if [ $RETVAL -eq 0 ]; then
+          start
+          RETVAL=$?
+       fi
+    fi
+    ;;
+    status)
+    status $service
+    RETVAL=0
+    ;;
+    *)
+    echo "Usage: $service {start|stop|restart|condrestart|status}"
+    RETVAL=1
+    ;;
+esac
+
+exit $RETVAL
+```
+Make sure **to adjust the "agent_user=" line** with your OGP agent username.
+
+#### Normal Init.d Script (Older Operating Systems - Ubuntu 14.04 & Older / CentOS 6 & Older)
+
+`sudo nano /etc/init.d/ogp_vnc`
+
+Copy and paste the following lines into the file (adjust the "agent_user=" line with your OGP agent username):
 
 ```
 #!/bin/sh
@@ -164,7 +272,7 @@ esac
 exit $RETVAL
 ```
 
-Make sure to adjust the "agent_user=" line with your agent's username.
+Make sure **to adjust the "agent_user=" line** with your OGP agent username.
 
 Save and exit.  Make the script executable by running the below command:
 
