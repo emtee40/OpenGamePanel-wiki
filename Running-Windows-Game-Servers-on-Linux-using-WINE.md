@@ -20,6 +20,7 @@ sudo yum install epel-release
 sudo yum install wine fluxbox
 sudo yum install vnc-server
 sudo yum install tigervnc-server
+sudo yum install nano
 ```
 
 ### Set VNC Password and Configure Fluxbox
