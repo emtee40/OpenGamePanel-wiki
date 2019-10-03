@@ -56,7 +56,7 @@ Switch back to the root account.
 
 ### Create a Startup Script for the VNC Server
 ***
-#### Systemd Service (Ubuntu 16.04 / CentOS 7 / Newer Operating Systems)
+#### Systemd Service (Ubuntu 16.04+ / CentOS 7+ / Newer Operating Systems)
 
 `sudo nano /etc/systemd/system/ogp_vnc.service`
 
@@ -282,7 +282,10 @@ Save and exit.  Make the script executable by running the below command:
 
 #### Fedora / CentOS/ Red-Hat:
 
-`sudo chkconfig ogp_vnc on`
+```
+sudo chkconfig ogp_vnc on
+sudo systemctl enable ogp_vnc
+```
 
 ### Start the Service
 
