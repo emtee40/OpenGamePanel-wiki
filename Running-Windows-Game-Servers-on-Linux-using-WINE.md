@@ -90,6 +90,10 @@ Create the script called by the service file:
 
 Copy and paste the following lines into the file (adjust the "agent_user=" line with your agent username):
 
+Enable the ogp_vnc agent on boot:
+
+`sudo systemctl enable ogp_vnc`
+
 ```
 #!/bin/sh
 agent_user=ogp_agent
