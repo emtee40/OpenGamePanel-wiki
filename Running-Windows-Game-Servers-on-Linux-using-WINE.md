@@ -15,10 +15,12 @@ Run the below commands based on your operating system to obtain everything you n
 `sudo apt-get install wine fluxbox vnc4server`
 
 #### Fedora / CentOS / Red-Hat:
-`sudo yum install epel-release`
-`sudo yum install wine fluxbox`
-`sudo yum install vnc-server`
-`sudo yum install tigervnc-server`
+```
+sudo yum install epel-release
+sudo yum install wine fluxbox
+sudo yum install vnc-server
+sudo yum install tigervnc-server
+```
 
 ### Set VNC Password and Configure Fluxbox
 
