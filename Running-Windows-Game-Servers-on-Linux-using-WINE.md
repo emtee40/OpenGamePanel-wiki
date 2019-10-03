@@ -95,7 +95,7 @@ Copy and paste the following lines into the file (adjust the "agent_user=" line 
 ```
 #!/bin/sh
 export PATH="/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin"
-agent_user=earnolmartin
+agent_user=ogp_agent
 #service=ogp_vnc.service
 
 start() {
