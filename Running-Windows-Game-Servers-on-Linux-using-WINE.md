@@ -63,7 +63,7 @@ Switch back to the root account.
 Copy and paste the following lines into the file:
 
 ```
-# ogp_agent systemd Service Script
+# ogp_vnc systemd Service Script
 # By Open Game Panel
 # OGP <own3mall@gmail.com>
 [Unit]
