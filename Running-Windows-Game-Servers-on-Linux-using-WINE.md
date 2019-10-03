@@ -155,6 +155,20 @@ Enable the ogp_vnc agent on boot:
 Make this file executable:
 
 `sudo chmod 775 /usr/bin/ogp_vnc.sh`
+
+Run the following commands to make VNC accessible from remote connections:
+
+```
+sudo yum -y install iptables-services
+sudo echo "SELINUX=disabled" > "/etc/sysconfig/selinux"
+sudo systemctl disable firewalld
+sudo iptables -F # Flush all the rules
+sudo service iptables save
+```
+Reboot your machine:
+
+`sudo shutdown -r now`
+
 ***
 #### Normal Init.d Script (Older Operating Systems - Ubuntu 14.04 & Older / CentOS 6 & Older)
 
