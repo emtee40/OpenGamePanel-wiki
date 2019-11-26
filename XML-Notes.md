@@ -18,7 +18,7 @@ All the following elements should be contained within `<game_config>` element.
 
 ___
 #### Game Key:
-Comes after `<game_config>` element.  There can only be one `<game_key>` element. Example:
+Comes after `<game_config>` element (actually within `<game_config>` element as said above).  There can only be one `<game_key>` element. Example:
 
 ```
 <game_key>space_engineers_win64</game_key>
