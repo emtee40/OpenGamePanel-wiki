@@ -159,15 +159,7 @@ Make this file executable:
 
 `sudo chmod 775 /usr/bin/ogp_vnc.sh`
 
-Run the following commands to make VNC accessible from remote connections:
 
-```
-sudo yum -y install iptables-services
-sudo echo "SELINUX=disabled" > "/etc/sysconfig/selinux"
-sudo systemctl disable firewalld
-sudo iptables -F # Flush all the rules
-sudo service iptables save
-```
 Reboot your machine:
 
 `sudo shutdown -r now`
@@ -300,7 +292,7 @@ sudo update-rc.d ogp_vnc defaults
 sudo systemctl enable ogp_vnc
 ```
 
-#### Fedora / CentOS/ Red-Hat:
+#### Fedora / CentOS / Red-Hat:
 
 ```
 sudo chkconfig ogp_vnc on
@@ -314,3 +306,17 @@ sudo systemctl enable ogp_vnc
 ### Connecting via VNC:
 
 Connect to your server by using your server's IP address and port 1 using any VNC client.  
+
+Run the following commands to make VNC accessible from remote connections:
+
+#### Fedora / CentOS / Red-Hat:
+
+```
+sudo yum -y install iptables-services
+sudo echo "SELINUX=disabled" > "/etc/sysconfig/selinux"
+sudo systemctl disable firewalld
+sudo iptables -F # Flush all the rules
+sudo service iptables save
+```
+
+Note that this is absolutely not required to have WINE working in OGP. It can be useful for specific rare cases where you would need to access the desktop created for running WINE game servers, for example to click the WINE popup asking to install a specific component. Most of the time you wouldn't want to have this desktop accessible.
