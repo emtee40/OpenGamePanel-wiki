@@ -76,7 +76,7 @@ After=network.target
 [Service]
 Type=oneshot
 
-ExecStart=/bin/nohup /bin/sh -c "/usr/bin/ogp_vnc.sh start" &>/dev/null &
+ExecStart=/usr/bin/nohup /bin/sh -c "/usr/bin/ogp_vnc.sh start" &>/dev/null &
 ExecStop=/bin/sh -c "/usr/bin/ogp_vnc.sh stop"
 
 RemainAfterExit=yes
@@ -281,7 +281,6 @@ Save and exit.  Make the script executable by running the below command:
 
 `sudo chmod +x /etc/init.d/ogp_vnc`
 
-***
 
 ### Run the VNC Script when the System Boots
 
@@ -298,6 +297,8 @@ sudo systemctl enable ogp_vnc
 sudo chkconfig ogp_vnc on
 sudo systemctl enable ogp_vnc
 ```
+
+***
 
 ### Start the Service
 
